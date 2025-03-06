@@ -98,6 +98,32 @@ public class MainBangunRuang {
 
         double avgVolumeLimasPersegi = totalVolumeLimasPersegi / pyramidArray.length;
         System.out.println("Rata-rata Volume Limas Segi Empat adalah: "+ avgVolumeLimasPersegi + "\n");
+
+        System.out.println("========================== TABUNG ============================");
+        Tabung[] tubesArray;
+        tubesArray = new Tabung[5];
+
+        tubesArray[0] = new Tabung(4, 5);
+        tubesArray[1] = new Tabung(3, 4);
+        tubesArray[2] = new Tabung(5, 2);
+        tubesArray[3] = new Tabung(2, 3);
+        tubesArray[4] = new Tabung(4, 3);
+        
+
+        index = 0;
+        for (Tabung loopTabung : tubesArray) {
+            System.out.println("Volume Tabung ke-"+ (index+1)+ " adalah:"+ loopTabung.ComputeAndSetVolume());
+            index++;
+        }
+
+        double totalVolumeTabung = 0;
+        for (Tabung loopTabung : tubesArray) {
+            totalVolumeTabung += loopTabung.ComputeAndSetVolume();
+        }
+
+        double avgVolumeTabung = totalVolumeTabung / tubesArray.length;
+        System.out.println("Rata-rata Volume Tabung adalah: "+ avgVolumeTabung + "\n");
+
         
     }
 }
