@@ -74,5 +74,30 @@ public class MainBangunRuang {
         double avgVolumeBola = totalVolumeBola / ballArray.length;
         System.out.println("Rata-rata Volume Bola adalah: "+ avgVolumeBola + "\n");
 
+        System.out.println("========================== LIMAS SEGI EMPAT ============================");
+        LimasPersegi[] pyramidArray;
+        pyramidArray = new LimasPersegi[5];
+
+        pyramidArray[0] = new LimasPersegi(4, 3);
+        pyramidArray[1] = new LimasPersegi(2, 3);
+        pyramidArray[2] = new LimasPersegi(2, 4);
+        pyramidArray[3] = new LimasPersegi(4,2);
+        pyramidArray[4] = new LimasPersegi(3, 2);
+        
+
+        index = 0;
+        for (LimasPersegi loopLimasPersegi : pyramidArray) {
+            System.out.println("Volume Limas Segi Empat ke-"+ (index+1)+ " adalah:"+ loopLimasPersegi.ComputeAndSetVolume());
+            index++;
+        }
+
+        double totalVolumeLimasPersegi = 0;
+        for (LimasPersegi loopLimasPersegi : pyramidArray) {
+            totalVolumeLimasPersegi += loopLimasPersegi.ComputeAndSetVolume();
+        }
+
+        double avgVolumeLimasPersegi = totalVolumeLimasPersegi / pyramidArray.length;
+        System.out.println("Rata-rata Volume Limas Segi Empat adalah: "+ avgVolumeLimasPersegi + "\n");
+        
     }
 }
