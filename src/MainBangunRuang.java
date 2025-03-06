@@ -48,6 +48,31 @@ public class MainBangunRuang {
 
         double avgVolumeBalok = totalVolumeBalok / blockArray.length;
         System.out.println("Rata-rata Volume Balok adalah: "+ avgVolumeBalok + "\n");
+        
+        System.out.println("========================== BOLA ============================");
+        Bola[] ballArray;
+        ballArray = new Bola[5];
+
+        ballArray[0] = new Bola(4);
+        ballArray[1] = new Bola(3);
+        ballArray[2] = new Bola(5);
+        ballArray[3] = new Bola(2);
+        ballArray[4] = new Bola(7);
+        
+
+        index = 0;
+        for (Bola loopBola : ballArray) {
+            System.out.println("Volume Bola ke-"+ (index+1)+ " adalah:"+ loopBola.ComputeAndSetVolume());
+            index++;
+        }
+
+        double totalVolumeBola = 0;
+        for (Bola loopBola : ballArray) {
+            totalVolumeBola += loopBola.ComputeAndSetVolume();
+        }
+
+        double avgVolumeBola = totalVolumeBola / ballArray.length;
+        System.out.println("Rata-rata Volume Bola adalah: "+ avgVolumeBola + "\n");
 
     }
 }
